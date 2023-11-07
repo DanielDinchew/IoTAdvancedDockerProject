@@ -1,0 +1,9 @@
+FROM python
+
+RUN pip install -r requirements.txt
+
+WORKDIR /sender-app
+
+COPY . .
+
+ENTRYPOINT app.py
