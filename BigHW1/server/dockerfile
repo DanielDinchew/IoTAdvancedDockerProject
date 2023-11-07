@@ -1,0 +1,9 @@
+FROM python as base
+
+RUN pip install -r requirements.txt
+
+WORKDIR /server-app
+
+COPY . .
+
+ENTRYPOINT app.py
